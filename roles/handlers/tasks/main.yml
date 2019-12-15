@@ -1,20 +1,20 @@
 ---
 - name: restart httpd
   service:
-    name: httpd
+    name: apache2
     state: restarted
 
 - name: reload httpd
   service:
-    name: httpd
+    name: apache2
     state: reloaded
-    
+
 - name: start httpd
   service:
-    name: httpd
+    name: apache2
     state: started
-    
+
 - name: stop httpd
   service:
-    name: httpd
+    name: apache2
     state: stopped
