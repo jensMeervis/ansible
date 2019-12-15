@@ -1,0 +1,13 @@
+---
+- name: Install Apache2 on the target machines
+  apt:
+     name: httpd
+     state: present
+     update_cache: yes
+  notify:
+  - restart apache
+
+- name: ensure httpd is running
+  service:
+    name: httpd
+    state: started

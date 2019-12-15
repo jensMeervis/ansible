@@ -1,0 +1,20 @@
+---
+- name: restart httpd
+  service:
+    name: httpd
+    state: restarted
+
+- name: reload httpd
+  service:
+    name: httpd
+    state: reloaded
+    
+- name: start httpd
+  service:
+    name: httpd
+    state: started
+    
+- name: stop httpd
+  service:
+    name: httpd
+    state: stopped

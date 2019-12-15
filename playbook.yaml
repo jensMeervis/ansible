@@ -1,0 +1,16 @@
+---
+- hosts: webservers
+  remote_user: ec2-user
+  pre_tasks:
+    - name: Add repo for php7.0
+      apt_repository:
+        repo: "ppa:ondrej/php" 
+        update_cache: yes
+  roles:
+   - git
+   - httpd
+   - php
+   - handlers
+   - clone
+   
+      

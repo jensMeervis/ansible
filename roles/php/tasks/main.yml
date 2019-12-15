@@ -1,0 +1,21 @@
+---
+- name: Install php on the target machines
+  apt:
+     name: "{{ item }}"
+     state: present
+     update_cache: yes
+  with_items:
+    - php7.2-curl
+    - php7.2-gd
+    - php7.2-intl
+    - php7.2-mysql
+    - php7.2-xml
+    - php7.2-xmlrpc
+    - php7.2-ldap
+    - php7.2-zip
+    - php7.2-soap
+    - php7.2-mbstring
+    - php7.2-pspell
+    - php7.2-cli
+  notify:
+  - restart httpd

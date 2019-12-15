@@ -1,0 +1,6 @@
+---
+- name: Install git on the target machines
+  apt:
+     name: git
+     state: present
+     update_cache: yes
