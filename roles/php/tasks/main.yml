@@ -17,5 +17,3 @@
     - php7.2-mbstring
     - php7.2-pspell
     - php7.2-cli
-  notify:
-  - restart apache2
