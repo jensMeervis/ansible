@@ -18,4 +18,4 @@
     - php7.2-pspell
     - php7.2-cli
   notify:
-  - restart httpd
+  - restart apache2
