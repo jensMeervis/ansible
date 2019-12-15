@@ -4,8 +4,6 @@
      name: apache2
      state: present
      update_cache: yes
-  notify:
-  - restart apache2
 
 - name: ensure httpd is running
   service:
